@@ -28,7 +28,7 @@ export const Success = (text) => {
 };
 
 //Swal for warning notif
-export const Warning = (text) => {
+export const Info = (text) => {
   return Swal.fire({
     icon: "info",
     title: "Info",
