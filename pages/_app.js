@@ -12,6 +12,9 @@ import Provider from "../src/common/provider.component";
 
 // Local styles
 import "../styles/globals.css";
+import "../styles/login.css";
+import "react-bootstrap-table-next/dist/react-bootstrap-table2.min.css";
+import "bootstrap/dist/css/bootstrap.css";
 
 function MyApp({ Component, pageProps, apollo }) {
   useEffect(() => {
