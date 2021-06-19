@@ -8,7 +8,7 @@ import { Form, FormGroup, Label, Input, FormText, Spinner, Row, Col } from "reac
 import NavBar from "../../src/common/navbar.component";
 import TableComponent from "../../src/common/table.component";
 import ModalComponent from "../../src/common/modal.component";
-import { Success, Error } from "../../src/lib/alert";
+import { Success } from "../../src/lib/alert";
 
 const User = () => {
   const [tableData, setTableData] = React.useState([]);
@@ -53,9 +53,7 @@ const User = () => {
       handleCloseModal();
       Success("User Created");
     },
-    onError: (errors) => {
-      Error(errors.graphQLErrors[0].message);
-    },
+    onError: (errors) => {},
   });
 
   const [updateUser] = useMutation(Mutation.USER_UPDATE, {
@@ -65,9 +63,7 @@ const User = () => {
       handleCloseModal();
       Success("User Updated");
     },
-    onError: (errors) => {
-      Error(errors.graphQLErrors[0].message);
-    },
+    onError: (errors) => {},
   });
 
   const [deleteUser] = useMutation(Mutation.USER_DELETE, {
@@ -76,9 +72,7 @@ const User = () => {
       refetchListUsers();
       Success("User Deleted");
     },
-    onError: (errors) => {
-      Error(errors.graphQLErrors[0].message);
-    },
+    onError: (errors) => {},
   });
 
   const handleCloseModal = () => {
