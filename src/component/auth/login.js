@@ -49,7 +49,7 @@ const Login = () => {
         <br />
         <Form className="box-form" onSubmit={handleSubmit(onSubmit)}>
           <FormGroup>
-            <Label for="username">Email</Label>
+            <Label for="username">Username</Label>
             <Controller name="username" control={control} render={({ field }) => <Input {...field} type="text" id="username" />} />
             {errors.username && <FormText color="warning">This field is required</FormText>}
           </FormGroup>
@@ -58,7 +58,7 @@ const Login = () => {
             <Controller name="password" control={control} render={({ field }) => <Input {...field} type="password" id="password" />} />
             {errors.password && <FormText color="warning">This field is required</FormText>}
           </FormGroup>
-          <Button type="submit">Submit</Button>
+          <Button type="submit">LOGIN</Button>
         </Form>
       </div>
     </div>
