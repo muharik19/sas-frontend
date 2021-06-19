@@ -36,10 +36,10 @@ const authLink = setContext((_, { headers }) => {
 });
 
 // Handle and inspect errors in your GraphQL network stack
-const linkError = onError(({ graphQlErrors, networkError }) => {
-  if (graphQlErrors) {
+const linkError = onError(({ graphQLErrors, networkError }) => {
+  if (graphQLErrors) {
     // listen to server response and give notif swal if error from server only
-    const error = _get(graphQlErrors, "0.message");
+    const error = _get(graphQLErrors, "0.message");
     Error(error);
 
     if (error === "Anda tidak memiliki otorisasi") {
@@ -50,7 +50,7 @@ const linkError = onError(({ graphQlErrors, networkError }) => {
       });
     }
 
-    graphQlErrors.map(({ message, locations, path }) => {
+    graphQLErrors.map(({ message, locations, path }) => {
       console.log(`[GraphQL error]: Message: ${message}, Location: ${locations}, Path: ${path}`);
     });
   }
