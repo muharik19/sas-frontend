@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useForm, Controller } from "react-hook-form";
 import { Queries } from "../../config/graphql/index";
 import { useLazyQuery } from "@apollo/react-hooks";
